@@ -1,28 +1,21 @@
+import java.util.Scanner;
 
 public class FinallyDemo {
-    public static void main(String [] args){
-        // TODO: Read a and b
-        Scanner sc = new Scanner(System.in);
-	int a=sc.nextInt();
-	int b=sc.nextInt();
-	try{
-		System.out.println("Result: " + a/b);
-	}
-	catch(ArithmeticException e){
-		System.out.println("Error: " + e.getMessage());
+    
+        public static void main(String[] args) {
+                Scanner sc = new Scanner(System.in);
+                int a = sc.nextInt();
+                int b=sc.nextInt();
 
-	}
-	finally{
-		System.out.println("Finally block executed");
-	}
-        // TODO: try block
-        // Perform division
-        // Print "Result: " + result
-        
-        // TODO: catch ArithmeticException e
-        // Print "Error: " + e.getMessage()
-        
-        // TODO: finally block
-        // Print "Finally block executed"
-    }
+                try{
+                        int c = a/b;
+                        System.out.println("Result: "+c);
+                }
+                catch(ArithmeticException ex){
+                        System.out.println("Error: " + ex.getMessage() );
+                }
+                finally {
+                        System.out.println("Finally block executed");
+                }
+        }
 }
